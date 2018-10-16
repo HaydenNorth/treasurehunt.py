@@ -1,0 +1,26 @@
+#Getting 3 random locations on the easymap and defining hidden_easy
+import random
+
+location1=random.randint(0,8)
+
+location2=location1
+while location2==location1:
+    location2=random.randint(0,8)
+
+location3=location1
+while location3==location1 or location3==location2:
+    location3=random.randint(0,8)
+
+loc1row=location1//3
+loc1col=(location1%3)
+loc2row=location2//3
+loc2col=(location2%3)
+loc3row=location3//3
+loc3col=(location3%3)
+
+hidden_easy=[["O","O","O"],["O","O","O"],["O","O","O"]]
+hidden_easy[loc1row,loc1col]=chr(9818)
+hidden_easy[loc2row,loc2col]=chr(9818)
+hidden_easy[loc2row,loc2col]=chr(9818)
+
+#Andrew is working on the hidden maps for medium and hard and will get those done later
